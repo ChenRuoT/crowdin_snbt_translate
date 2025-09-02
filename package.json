@@ -1,0 +1,17 @@
+{
+  "name": "crowdin-snbt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@crowdin/app-project-module": "^0.96.0"
+  }
+}

@@ -1,7 +1,7 @@
 {
-  "name": "crowdin-snbt",
+"name": "crowdin-snbt-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Crowdin App for processing .snbt files",
   "main": "index.js",
   "engines": {
     "node": "22.x"
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@crowdin/app-project-module": "^0.96.0"
+    "@crowdin/app-project-module": "^0.96.0",
+    "@bdsx/snbt": "^1.1.2"
   }
 }

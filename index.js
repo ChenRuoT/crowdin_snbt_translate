@@ -4,13 +4,27 @@ const configuration = {
   name: 'Sample App',
   identifier: 'sample-app',
   description: 'Sample App description',
-  baseUrl: process.env.BASE_URL || 'https://123.ngrok.io',
-  port: process.env.PORT || 8080,
-  clientId: process.env.CLIENT_ID || 'clientId',
-  clientSecret: process.env.CLIENT_SECRET || 'clientSecret',
+  baseUrl: `https://${process.env.VERCEL_URL}`,
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
   dbFolder: __dirname,
   imagePath: __dirname + '/' + 'logo.png',
   detailPage: 'https://company.com/apps/sample',
+  postgreConfig: {
+    host: process.env.POSTGRES_HOST,
+    user: process.env.POSTGRES_USER,
+    password: process.env.POSTGRES_PASSWORD,
+    database: process.env.POSTGRES_DATABASE,
+    ssl: true
+  },
+    customMT: {
+    translate: () => {
+      console.log('translate');
+    },
+    validate: () => {
+      console.log('validate');
+    }
+  },
   scopes: [
     crowdinModule.Scope.PROJECTS
   ],
